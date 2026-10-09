@@ -34,10 +34,12 @@ Creciendo → Poco maduro → Maduro → Podrido.
 
 | Fruta | Efecto (poco / maduro / podrido) | Semilla (Hacha + offhand) | Pelos | Mob |
 |-------|----------------------------------|---------------------------|-------|-----|
-| **Fruta Solaria** | Fire Resistance corto / completo / Hunger | Sí | — | Plumosaurio → Excremento *(pendiente)* |
-| **Huevo Eburia** | Health Boost corto / 1:00 (+4 máx.) / Hunger | Sí | **Pelos de Eburia** (Tijeras + offhand) | — |
-| **Arándano Nocturino** | Night Vision corto / largo / Blindness | Sí | — | — |
-| **Baya Uvina** | Regeneration corta / completa / Poison | Sí | — | — |
+| **Fruta Solaria** | Fire Resistance corto / completo / **ninguno** | Sí (también podrida) | — | Plumosaurio → Excremento *(pendiente)* |
+| **Huevo Eburia** | Health Boost corto / 1:00 (+4 máx.) / **ninguno** | Sí (también podrida) | **Pelos de Eburia** (Tijeras + offhand) | — |
+| **Arándano Nocturino** | Night Vision corto / largo / **ninguno** | Sí (también podrida) | — | — |
+| **Baya Uvina** | Regeneration corta / completa / **ninguno** | Sí (también podrida) | — | — |
+
+La fruta **podrida** no aplica efectos al comerla, pero sí permite extraer la semilla con hacha.
 
 ### Efectos elegidos
 

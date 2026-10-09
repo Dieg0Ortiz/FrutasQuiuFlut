@@ -59,7 +59,7 @@ public final class ModRegistries {
 
 		FruitDefinition def = fruitItem.definition();
 
-		// Semilla con Hacha
+		// Semilla con Hacha (válido también si la fruta está podrida)
 		if (main.getItem() instanceof AxeItem) {
 			if (!def.hasSeed() || def.seedItem() == null) {
 				return InteractionResult.PASS;

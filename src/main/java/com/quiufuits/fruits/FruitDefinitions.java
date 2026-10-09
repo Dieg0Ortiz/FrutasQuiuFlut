@@ -26,6 +26,7 @@ import java.util.Map;
  * <p><b>Huevo Eburia — Health Boost</b>: +4 salud máxima (como en la ficha de referencia).
  * <p><b>Arándano Nocturino — Night Vision</b>: tema nocturno.
  * <p><b>Baya Uvina — Regeneration</b>: baya dulce restauradora.
+ * <p>Etapa podrida: sin efecto al comer; la semilla sí se puede extraer con hacha.
  */
 public final class FruitDefinitions {
 	private static final Map<String, FruitDefinition> BY_ID = new LinkedHashMap<>();
@@ -41,10 +42,9 @@ public final class FruitDefinitions {
 	public static void bootstrap() {
 		SOLARIA = register(FruitDefinition.builder("solaria")
 				.color(0xFFC94A)
-				.effects(FruitEffectProfile.of(
+				.effects(FruitEffectProfile.beneficial(
 						MobEffects.FIRE_RESISTANCE, 8 * 20, 0,
-						MobEffects.FIRE_RESISTANCE, 45 * 20, 0,
-						MobEffects.HUNGER, 12 * 20, 0
+						MobEffects.FIRE_RESISTANCE, 45 * 20, 0
 				))
 				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
@@ -66,10 +66,9 @@ public final class FruitDefinitions {
 		// Huevo Eburia: Salud mejorada 1:00 / Salud máxima +4 (HEALTH_BOOST amp 0)
 		EBURIA = register(FruitDefinition.builder("eburia")
 				.color(0xD4B896)
-				.effects(FruitEffectProfile.of(
+				.effects(FruitEffectProfile.beneficial(
 						MobEffects.HEALTH_BOOST, 20 * 20, 0,
-						MobEffects.HEALTH_BOOST, 60 * 20, 0,
-						MobEffects.HUNGER, 15 * 20, 1
+						MobEffects.HEALTH_BOOST, 60 * 20, 0
 				))
 				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
@@ -90,10 +89,9 @@ public final class FruitDefinitions {
 
 		NOCTURINO = register(FruitDefinition.builder("nocturino")
 				.color(0x3A5FBF)
-				.effects(FruitEffectProfile.of(
+				.effects(FruitEffectProfile.beneficial(
 						MobEffects.NIGHT_VISION, 15 * 20, 0,
-						MobEffects.NIGHT_VISION, 90 * 20, 0,
-						MobEffects.BLINDNESS, 8 * 20, 0
+						MobEffects.NIGHT_VISION, 90 * 20, 0
 				))
 				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
@@ -112,10 +110,9 @@ public final class FruitDefinitions {
 
 		UVINA = register(FruitDefinition.builder("uvina")
 				.color(0xE05AA8)
-				.effects(FruitEffectProfile.of(
+				.effects(FruitEffectProfile.beneficial(
 						MobEffects.REGENERATION, 5 * 20, 0,
-						MobEffects.REGENERATION, 12 * 20, 0,
-						MobEffects.POISON, 8 * 20, 0
+						MobEffects.REGENERATION, 12 * 20, 0
 				))
 				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)

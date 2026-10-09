@@ -64,12 +64,12 @@ public class FruitItem extends Item {
 	public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
 		FruitStage stage = getStage(stack);
 		ItemStack result = super.finishUsingItem(stack, level, entity);
-		if (!level.isClientSide) {
+		// Podrida: se puede comer y sacar semilla, pero no aplica ningún efecto
+		if (!level.isClientSide && stage != FruitStage.ROTTEN && stage != FruitStage.GROWING) {
 			MobEffectInstance effect = switch (stage) {
-				case GROWING -> null;
 				case UNDER_RIPE -> definition().effects().underRipeInstance();
 				case RIPE -> definition().effects().ripeInstance();
-				case ROTTEN -> definition().effects().rottenInstance();
+				default -> null;
 			};
 			if (effect != null) {
 				entity.addEffect(new MobEffectInstance(effect));

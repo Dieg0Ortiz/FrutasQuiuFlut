@@ -42,4 +42,16 @@ public record FruitEffectProfile(
 	) {
 		return new FruitEffectProfile(weak, weakDuration, weakAmp, full, fullDuration, fullAmp, negative, negDuration, negAmp);
 	}
+
+	/** Efectos solo en poco maduro / maduro. Podrida = sin efecto. */
+	public static FruitEffectProfile beneficial(
+			MobEffect weak,
+			int weakDuration,
+			int weakAmp,
+			MobEffect full,
+			int fullDuration,
+			int fullAmp
+	) {
+		return new FruitEffectProfile(weak, weakDuration, weakAmp, full, fullDuration, fullAmp, null, 0, 0);
+	}
 }
