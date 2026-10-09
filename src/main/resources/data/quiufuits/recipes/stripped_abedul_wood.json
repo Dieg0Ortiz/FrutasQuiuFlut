@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "quiufuits:stripped_abedul_log"
+    }
+  },
+  "result": {
+    "item": "quiufuits:stripped_abedul_wood",
+    "count": 3
+  }
+}

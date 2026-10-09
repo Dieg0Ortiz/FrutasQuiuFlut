@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "quiufuits:block/stripped_quiu_oak_log",
+    "side": "quiufuits:block/stripped_quiu_oak_log"
+  }
+}

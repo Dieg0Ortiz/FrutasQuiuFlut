@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "abedul_planks",
+  "ingredients": [
+    {
+      "item": "quiufuits:stripped_abedul_wood"
+    }
+  ],
+  "result": {
+    "item": "quiufuits:abedul_planks",
+    "count": 4
+  }
+}

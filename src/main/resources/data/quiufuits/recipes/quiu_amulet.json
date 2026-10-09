@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SGL",
+    "MB ",
+    "A  "
+  ],
+  "key": {
+    "S": {
+      "item": "quiufuits:pelo_solar"
+    },
+    "G": {
+      "item": "quiufuits:pelo_glebanoide"
+    },
+    "L": {
+      "item": "quiufuits:pelo_lunar"
+    },
+    "M": {
+      "item": "quiufuits:pelo_marino"
+    },
+    "B": {
+      "item": "quiufuits:pelo_bruma"
+    },
+    "A": {
+      "item": "quiufuits:pelo_ambarino"
+    }
+  },
+  "result": {
+    "item": "quiufuits:quiu_amulet",
+    "count": 1
+  }
+}

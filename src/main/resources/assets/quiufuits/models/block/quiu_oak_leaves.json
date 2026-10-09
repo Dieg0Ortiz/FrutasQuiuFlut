@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "quiufuits:block/quiu_oak_leaves"
+  }
+}

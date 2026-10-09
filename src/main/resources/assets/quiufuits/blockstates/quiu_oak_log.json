@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "quiufuits:block/quiu_oak_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "quiufuits:block/quiu_oak_log"
+    },
+    "axis=z": {
+      "model": "quiufuits:block/quiu_oak_log_horizontal",
+      "x": 90
+    }
+  }
+}

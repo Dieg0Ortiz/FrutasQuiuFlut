@@ -1,0 +1,88 @@
+{
+  "itemGroup.quiufuits.main": "Quiu Fruits",
+
+  "block.quiufuits.quiu_oak_log": "Quiu Oak Log",
+  "block.quiufuits.stripped_quiu_oak_log": "Stripped Quiu Oak Log",
+  "block.quiufuits.quiu_oak_wood": "Quiu Oak Wood",
+  "block.quiufuits.stripped_quiu_oak_wood": "Stripped Quiu Oak Wood",
+  "block.quiufuits.quiu_oak_leaves": "Quiu Oak Leaves",
+  "block.quiufuits.quiu_oak_sapling": "Quiu Oak Sapling",
+  "block.quiufuits.quiu_oak_planks": "Quiu Oak Planks",
+
+  "block.quiufuits.abedul_log": "Abedul Log",
+  "block.quiufuits.stripped_abedul_log": "Stripped Abedul Log",
+  "block.quiufuits.abedul_wood": "Abedul Wood",
+  "block.quiufuits.stripped_abedul_wood": "Stripped Abedul Wood",
+  "block.quiufuits.abedul_leaves": "Abedul Leaves",
+  "block.quiufuits.abedul_sapling": "Abedul Sapling",
+  "block.quiufuits.abedul_planks": "Abedul Planks",
+
+  "block.quiufuits.solaria_fruit": "Solaria Fruit Crop",
+  "block.quiufuits.glebanoida_fruit": "Glebanoid Fruit Crop",
+  "block.quiufuits.lunar_fruit": "Lunar Fruit Crop",
+  "block.quiufuits.marea_fruit": "Tide Fruit Crop",
+  "block.quiufuits.bruma_fruit": "Mist Fruit Crop",
+  "block.quiufuits.ambar_fruit": "Amber Fruit Crop",
+
+  "item.quiufuits.solaria_fruit": "Solaria Fruit",
+  "item.quiufuits.glebanoida_fruit": "Glebanoid Fruit",
+  "item.quiufuits.lunar_fruit": "Lunar Fruit",
+  "item.quiufuits.marea_fruit": "Tide Fruit",
+  "item.quiufuits.bruma_fruit": "Mist Fruit",
+  "item.quiufuits.ambar_fruit": "Amber Fruit",
+
+  "item.quiufuits.solaria_seed": "Solaria Fruit Seed",
+  "item.quiufuits.glebanoida_seed": "Glebanoid Fruit Seed",
+  "item.quiufuits.lunar_seed": "Lunar Fruit Seed",
+  "item.quiufuits.marea_seed": "Tide Fruit Seed",
+  "item.quiufuits.bruma_seed": "Mist Fruit Seed",
+  "item.quiufuits.ambar_seed": "Amber Fruit Seed",
+
+  "item.quiufuits.solaria_fruit_block": "Solaria Fruit (block)",
+  "item.quiufuits.glebanoida_fruit_block": "Glebanoid Fruit (block)",
+  "item.quiufuits.lunar_fruit_block": "Lunar Fruit (block)",
+  "item.quiufuits.marea_fruit_block": "Tide Fruit (block)",
+  "item.quiufuits.bruma_fruit_block": "Mist Fruit (block)",
+  "item.quiufuits.ambar_fruit_block": "Amber Fruit (block)",
+
+  "item.quiufuits.pelo_solar": "Solar Hair",
+  "item.quiufuits.pelo_glebanoide": "Glebanoid Hair",
+  "item.quiufuits.pelo_lunar": "Lunar Hair",
+  "item.quiufuits.pelo_marino": "Marine Hair",
+  "item.quiufuits.pelo_bruma": "Mist Hair",
+  "item.quiufuits.pelo_ambarino": "Amber Hair",
+  "item.quiufuits.hair.tooltip": "Not edible. Used for crafting.",
+
+  "item.quiufuits.quiu_amulet": "Quiu Amulet",
+
+  "item.quiufuits.fruit.stage.creciendo": "Growing",
+  "item.quiufuits.fruit.stage.poco_maduro": "Underripe",
+  "item.quiufuits.fruit.stage.maduro": "Ripe",
+  "item.quiufuits.fruit.stage.podrido": "Rotten",
+
+  "item.quiufuits.fruit.warning": "⚠ Warning: when it reaches peak ripeness, harvest it as soon as possible. After a while it will rot if left unpicked.",
+
+  "item.quiufuits.solaria.tooltip.seed": "Use an §eAxe§r while holding the fruit in the §bOff Hand§r to extract the §aSeed§r.",
+  "item.quiufuits.solaria.tooltip.hair": "Right-click the fruit on a log while holding a §cSword§r to extract §6Solar Hair§r.",
+  "item.quiufuits.solaria.tooltip.mob": "Feed to a §dPlumosaur§r for a chance to drop §7Excrement§r. (integration pending)",
+
+  "item.quiufuits.glebanoida.tooltip.seed": "Use an §eAxe§r with the fruit in the §bOff Hand§r to extract the §aSeed§r.",
+  "item.quiufuits.glebanoida.tooltip.hair": "Right-click with a §cSword§r to extract §aGlebanoid Hair§r.",
+  "item.quiufuits.glebanoida.tooltip.mob": "Feed to a §dCow§r for a chance to drop §7Leather§r.",
+
+  "item.quiufuits.lunar.tooltip.seed": "Use an §eAxe§r with the fruit in the §bOff Hand§r to extract the §aSeed§r (plant on Abedul logs).",
+  "item.quiufuits.lunar.tooltip.hair": "Right-click with a §cSword§r to extract §9Lunar Hair§r.",
+  "item.quiufuits.lunar.tooltip.mob": "Feed to a §dCat§r for a chance to drop §7String§r.",
+
+  "item.quiufuits.marea.tooltip.seed": "Use an §eAxe§r with the fruit in the §bOff Hand§r to extract the §aSeed§r.",
+  "item.quiufuits.marea.tooltip.hair": "Right-click with a §cSword§r to extract §3Marine Hair§r.",
+  "item.quiufuits.marea.tooltip.mob": "Feed to a §dTurtle§r for a chance to drop §7Seagrass§r.",
+
+  "item.quiufuits.bruma.tooltip.seed": "Use an §eAxe§r with the fruit in the §bOff Hand§r to extract the §aSeed§r.",
+  "item.quiufuits.bruma.tooltip.hair": "Right-click with a §cSword§r to extract §7Mist Hair§r.",
+  "item.quiufuits.bruma.tooltip.mob": "Feed to a §dPhantom§r for a chance to drop §7Phantom Membrane§r.",
+
+  "item.quiufuits.ambar.tooltip.seed": "Use an §eAxe§r with the fruit in the §bOff Hand§r to extract the §aSeed§r.",
+  "item.quiufuits.ambar.tooltip.hair": "Right-click with a §cSword§r to extract §6Amber Hair§r.",
+  "item.quiufuits.ambar.tooltip.mob": "Feed to a §dBee§r for a chance to drop §7Honeycomb§r."
+}

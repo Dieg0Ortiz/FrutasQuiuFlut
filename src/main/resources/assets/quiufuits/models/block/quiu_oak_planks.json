@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "quiufuits:block/quiu_oak_planks"
+  }
+}

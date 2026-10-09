@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "quiufuits:block/abedul_log",
+    "side": "quiufuits:block/abedul_log"
+  }
+}

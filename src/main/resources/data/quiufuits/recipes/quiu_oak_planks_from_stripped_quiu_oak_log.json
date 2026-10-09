@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "quiu_oak_planks",
+  "ingredients": [
+    {
+      "item": "quiufuits:stripped_quiu_oak_log"
+    }
+  ],
+  "result": {
+    "item": "quiufuits:quiu_oak_planks",
+    "count": 4
+  }
+}

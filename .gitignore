@@ -1,0 +1,43 @@
+# Gradle
+.gradle/
+build/
+out/
+classes/
+bin/
+
+# IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+.settings/
+.classpath
+.project
+*.launch
+.factorypath
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Fabric / Minecraft
+run/
+runs/
+logs/
+crash-reports/
+*.log
+
+# Java
+hs_err_*.log
+replay_*.log
+*.hprof
+*.jfr
+
+# Local secrets / env
+.env
+*.local
+
+# Remapped sources
+remappedSrc/
+sources/

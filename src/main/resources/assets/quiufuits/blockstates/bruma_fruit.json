@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "facing=north,stage=growing": {
+      "model": "quiufuits:block/bruma_fruit_growing",
+      "y": 0
+    },
+    "facing=east,stage=growing": {
+      "model": "quiufuits:block/bruma_fruit_growing",
+      "y": 90
+    },
+    "facing=south,stage=growing": {
+      "model": "quiufuits:block/bruma_fruit_growing",
+      "y": 180
+    },
+    "facing=west,stage=growing": {
+      "model": "quiufuits:block/bruma_fruit_growing",
+      "y": 270
+    },
+    "facing=north,stage=under_ripe": {
+      "model": "quiufuits:block/bruma_fruit_under_ripe",
+      "y": 0
+    },
+    "facing=east,stage=under_ripe": {
+      "model": "quiufuits:block/bruma_fruit_under_ripe",
+      "y": 90
+    },
+    "facing=south,stage=under_ripe": {
+      "model": "quiufuits:block/bruma_fruit_under_ripe",
+      "y": 180
+    },
+    "facing=west,stage=under_ripe": {
+      "model": "quiufuits:block/bruma_fruit_under_ripe",
+      "y": 270
+    },
+    "facing=north,stage=ripe": {
+      "model": "quiufuits:block/bruma_fruit_ripe",
+      "y": 0
+    },
+    "facing=east,stage=ripe": {
+      "model": "quiufuits:block/bruma_fruit_ripe",
+      "y": 90
+    },
+    "facing=south,stage=ripe": {
+      "model": "quiufuits:block/bruma_fruit_ripe",
+      "y": 180
+    },
+    "facing=west,stage=ripe": {
+      "model": "quiufuits:block/bruma_fruit_ripe",
+      "y": 270
+    },
+    "facing=north,stage=rotten": {
+      "model": "quiufuits:block/bruma_fruit_rotten",
+      "y": 0
+    },
+    "facing=east,stage=rotten": {
+      "model": "quiufuits:block/bruma_fruit_rotten",
+      "y": 90
+    },
+    "facing=south,stage=rotten": {
+      "model": "quiufuits:block/bruma_fruit_rotten",
+      "y": 180
+    },
+    "facing=west,stage=rotten": {
+      "model": "quiufuits:block/bruma_fruit_rotten",
+      "y": 270
+    }
+  }
+}

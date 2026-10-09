@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "quiufuits:quiu_oak_log"
+    }
+  },
+  "result": {
+    "item": "quiufuits:quiu_oak_wood",
+    "count": 3
+  }
+}
