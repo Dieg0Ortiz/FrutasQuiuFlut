@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "quiufuits:item/marea_fruit_block"
-  }
-}

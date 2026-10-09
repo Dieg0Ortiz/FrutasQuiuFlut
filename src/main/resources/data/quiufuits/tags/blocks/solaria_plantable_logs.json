@@ -1,7 +1,6 @@
 {
   "replace": false,
   "values": [
-    "#quiufuits:quiu_oak_logs",
-    "#quiufuits:abedul_logs"
+    "#quiufuits:fruit_plantable_logs"
   ]
 }

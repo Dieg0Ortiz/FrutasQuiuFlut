@@ -1,93 +1,70 @@
 # Quiu Fruits (`quiufuits`)
 
-Mod de Fabric para **Minecraft 1.20.1** con árboles del Centro de Quiu, frutas con ciclo de maduración (estilo cacao) y un sistema de fichas (`FruitDefinition`) para añadir frutas nuevas fácilmente.
+Mod Fabric para **Minecraft 1.20.1**: árboles del Centro de Quiu y las frutas oficiales de las fichas de referencia.
 
 - **Loader:** Fabric Loader + Fabric API  
 - **Java:** 17+  
-- **Mappings:** oficiales de Mojang (Loom)  
+- **Mappings:** oficiales de Mojang  
 - **Mod ID:** `quiufuits`
 
 ## Cómo ejecutar
 
 ```bash
 ./gradlew runClient
-# o generar el JAR
 ./gradlew build
-# JAR en build/libs/quiufuits-1.0.0.jar
+# JAR: build/libs/quiufuits-1.0.0.jar
 ```
 
-Configuración runtime: `config/quiufuits.json` (se crea al arrancar).
+Config: `config/quiufuits.json` (se crea al arrancar).
 
 ## Árboles
 
 | Árbol | Bloques | Worldgen |
 |-------|---------|----------|
-| **Roble de Quiu** | tronco, sin corteza, madera, hojas, retoño, tablones | tag `#quiufuits:centro_quiu` |
+| **Roble de Quiu** | tronco, sin corteza, madera, hojas, retoño, tablones | `#quiufuits:centro_quiu` |
 | **Abedúl** | idem | mismo tag |
 
-El tag de bioma es un **placeholder** (hoy incluye bosques vanilla). Cuando exista el bioma Centro de Quiu, edita:
+El tag de bioma es **placeholder** (bosques vanilla). Cuando exista el Centro de Quiu, edita  
+`data/quiufuits/tags/worldgen/biome/centro_quiu.json` sin tocar Java.
 
-`data/quiufuits/tags/worldgen/biome/centro_quiu.json`
+## Frutas oficiales
 
-sin tocar código Java.
+Todas se plantan en **Troncos de Abedúl** y **Roble de Quiu**, con ciclo  
+Creciendo → Poco maduro → Maduro → Podrido.
 
-Crecimiento: retoños con tiempo o bonemeal → feature configurada data-driven.
+| Fruta | Efecto (poco / maduro / podrido) | Semilla (Hacha + offhand) | Pelos | Mob |
+|-------|----------------------------------|---------------------------|-------|-----|
+| **Fruta Solaria** | Fire Resistance corto / completo / Hunger | Sí | — | Plumosaurio → Excremento *(pendiente)* |
+| **Huevo Eburia** | Health Boost corto / 1:00 (+4 máx.) / Hunger | Sí | **Pelos de Eburia** (Tijeras + offhand) | — |
+| **Arándano Nocturino** | Night Vision corto / largo / Blindness | Sí | — | — |
+| **Baya Uvina** | Regeneration corta / completa / Poison | Sí | — | — |
 
-## Frutas y efectos
+### Efectos elegidos
 
-Cada fruta pasa por **4 etapas** en el bloque: Creciendo → Poco maduro → Maduro → Podrido.
+- **Solaria → Fire Resistance:** calor solar → protección térmica.  
+- **Eburia → Health Boost:** coincide con la ficha (“Salud mejorada” / “Salud máxima: +4”).  
+- **Nocturino → Night Vision:** tema nocturno.  
+- **Uvina → Regeneration:** baya dulce restauradora.
 
-- Solo se cosecha desde **Poco maduro**.
-- En **Maduro** hay que recoger pronto; si no, **se pudre**.
-- **Podrido** se quita del tronco (clic) para reiniciar el ciclo.
-- Efectos al comer dependen de la etapa de cosecha.
-
-| Fruta | Efecto (poco / maduro / podrido) | Semilla en | Pelos | Mob (drop) |
-|-------|-----------------------------------|------------|-------|------------|
-| **Solaria** | Fire Resistance corto / completo / Hunger | Roble de Quiu + Abedúl | Pelo Solar | Plumosaurio → Excremento *(pendiente)* |
-| **Glebanoida** | Haste I corto / Haste II / Poison | ambos troncos | Pelo Glebanoide | Vaca → Cuero |
-| **Lunar** | Night Vision corto / largo / Blindness | Abedúl | Pelo Lunar | Gato → Hilo |
-| **Marea** | Water Breathing corto / largo / Nausea | Roble de Quiu | Pelo Marino | Tortuga → Hierba marina |
-| **Bruma** | Slow Falling corto / largo / Slowness | ambos | Pelo de Bruma | Fantasma → Membrana |
-| **Ámbar** | Resistance corto / completo / Weakness | Roble de Quiu | Pelo Ambarino | Abeja → Panal |
-
-### Por qué Fire Resistance en la Solaria
-
-Tema solar: la fruta concentra calor del sol. En lugar de quemar al jugador, le otorga **protección térmica** (Resistencia al fuego). Poco madura = breve; madura = larga; podrida = hambre (energía solar corrompida).
-
-### Interacciones comunes
+### Interacciones
 
 1. **Semilla:** Hacha en mano principal + fruta en secundaria.  
-2. **Pelos:** clic derecho en la fruta del tronco con Espada (−1 durabilidad).  
-3. **Mob:** clic derecho en la entidad con la fruta (probabilidad configurable).
+2. **Pelos (solo Eburia):** Tijeras en mano principal + Huevo Eburia en secundaria.  
+3. **Plumosaurio (solo Solaria):** placeholder por ID en config.
 
-### Receta de ejemplo (pelos)
+### Receta de ejemplo
 
-**Amuleto de Quiu** — crafteo con Pelo Solar, Glebanoide, Lunar, Marino, de Bruma y Ambarino.
+**Amuleto de Quiu** = Pelos de Eburia + las 4 frutas.
 
-## Arquitectura (`FruitDefinition`)
+## Arquitectura
 
-Paquete `com.quiufuits.fruits`: una ficha define color, efectos, tag de troncos plantables, semilla/pelos opcionales, mob feed y tooltips. Registrar en `FruitDefinitions.bootstrap()`.
-
-Estructura de paquetes:
-
-```
-com.quiufuits
-├── blocks/fruit|tree
-├── config
-├── fruits
-├── integration
-├── items
-├── registry
-└── worldgen
-```
+`FruitDefinition` + `FruitDefinitions.bootstrap()`. Paquetes: `blocks`, `items`, `fruits`, `worldgen`, `integration`, `registry`, `config`.
 
 ## Integraciones pendientes
 
-### Plumosaurio (otro mod, en desarrollo)
+### Plumosaurio
 
-- **No** se crea la entidad ni el ítem Excremento en este mod.
-- IDs placeholder en `config/quiufuits.json`:
+No se crea la entidad ni Excremento aquí. IDs en `config/quiufuits.json`:
 
 ```json
 "plumosaurio": {
@@ -97,24 +74,19 @@ com.quiufuits
 }
 ```
 
-- Se resuelven en **runtime** vía registro de Minecraft.
-- Si no existen → warning en log, interacción desactivada, **sin crash**.
-- Cuando el otro mod exista: cambia solo esos IDs (o confirma que coinciden) — **sin recompilar**.
-- Marcadores `TODO(integración)` en `MobFeedIntegration` y `ModConfig`.
+Si no existen → warning en log, sin crash. TODO en `MobFeedIntegration` / `ModConfig`.
 
-### Centro de Quiu (bioma)
+### Centro de Quiu
 
-- Sustituir valores del tag `#quiufuits:centro_quiu` por el bioma real.
+Sustituir biomas del tag `#quiufuits:centro_quiu`.
 
-## Control de versiones / GitHub
+## Git
 
 ```bash
 git add -A
-git commit -m "Descripción del cambio"
+git commit -m "Descripción"
 git push -u origin main
 ```
-
-Si usas otra rama: `git push -u origin <rama>`.
 
 ## Licencia
 

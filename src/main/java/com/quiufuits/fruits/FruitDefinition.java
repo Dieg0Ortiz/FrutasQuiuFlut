@@ -1,7 +1,6 @@
 package com.quiufuits.fruits;
 
 import com.quiufuits.blocks.fruit.FruitCropBlock;
-import com.quiufuits.blocks.fruit.FruitStage;
 import com.quiufuits.items.FruitHairItem;
 import com.quiufuits.items.FruitItem;
 import com.quiufuits.items.FruitSeedItem;
@@ -24,12 +23,14 @@ public final class FruitDefinition {
 	private final FruitEffectProfile effects;
 	private final Supplier<TagKey<Block>> plantableOnLogs;
 	private final boolean hasSeed;
-	private final boolean hasHair;
+	private final HairExtractMode hairExtractMode;
 	@Nullable
-	private final String hairNameKey;
+	private final String hairItemId;
 	@Nullable
 	private final MobFeedSpec mobFeed;
 	private final List<String> tooltipLines;
+	private final List<String> seedTooltipLines;
+	private final List<String> hairTooltipLines;
 	@Nullable
 	private FruitCropBlock cropBlock;
 	@Nullable
@@ -45,10 +46,12 @@ public final class FruitDefinition {
 		this.effects = builder.effects;
 		this.plantableOnLogs = builder.plantableOnLogs;
 		this.hasSeed = builder.hasSeed;
-		this.hasHair = builder.hasHair;
-		this.hairNameKey = builder.hairNameKey;
+		this.hairExtractMode = builder.hairExtractMode;
+		this.hairItemId = builder.hairItemId;
 		this.mobFeed = builder.mobFeed;
 		this.tooltipLines = List.copyOf(builder.tooltipLines);
+		this.seedTooltipLines = List.copyOf(builder.seedTooltipLines);
+		this.hairTooltipLines = List.copyOf(builder.hairTooltipLines);
 	}
 
 	public String id() {
@@ -72,12 +75,16 @@ public final class FruitDefinition {
 	}
 
 	public boolean hasHair() {
-		return hasHair;
+		return hairExtractMode != HairExtractMode.NONE;
+	}
+
+	public HairExtractMode hairExtractMode() {
+		return hairExtractMode;
 	}
 
 	@Nullable
-	public String hairNameKey() {
-		return hairNameKey;
+	public String hairItemId() {
+		return hairItemId;
 	}
 
 	public Optional<MobFeedSpec> mobFeed() {
@@ -86,6 +93,14 @@ public final class FruitDefinition {
 
 	public List<String> tooltipLines() {
 		return tooltipLines;
+	}
+
+	public List<String> seedTooltipLines() {
+		return seedTooltipLines;
+	}
+
+	public List<String> hairTooltipLines() {
+		return hairTooltipLines;
 	}
 
 	public FruitCropBlock cropBlock() {
@@ -142,12 +157,14 @@ public final class FruitDefinition {
 		private FruitEffectProfile effects;
 		private Supplier<TagKey<Block>> plantableOnLogs;
 		private boolean hasSeed = true;
-		private boolean hasHair = true;
+		private HairExtractMode hairExtractMode = HairExtractMode.NONE;
 		@Nullable
-		private String hairNameKey;
+		private String hairItemId;
 		@Nullable
 		private MobFeedSpec mobFeed;
 		private List<String> tooltipLines = Collections.emptyList();
+		private List<String> seedTooltipLines = Collections.emptyList();
+		private List<String> hairTooltipLines = Collections.emptyList();
 
 		private Builder(String id) {
 			this.id = id;
@@ -173,9 +190,16 @@ public final class FruitDefinition {
 			return this;
 		}
 
-		public Builder hair(boolean hasHair, @Nullable String hairNameKey) {
-			this.hasHair = hasHair;
-			this.hairNameKey = hairNameKey;
+		/** Pelos con Tijeras + fruta en mano secundaria (como Huevo Eburia). */
+		public Builder hairWithShears(String hairItemId) {
+			this.hairExtractMode = HairExtractMode.SHEARS_OFFHAND;
+			this.hairItemId = hairItemId;
+			return this;
+		}
+
+		public Builder noHair() {
+			this.hairExtractMode = HairExtractMode.NONE;
+			this.hairItemId = null;
 			return this;
 		}
 
@@ -186,6 +210,16 @@ public final class FruitDefinition {
 
 		public Builder tooltips(String... lines) {
 			this.tooltipLines = List.of(lines);
+			return this;
+		}
+
+		public Builder seedTooltips(String... lines) {
+			this.seedTooltipLines = List.of(lines);
+			return this;
+		}
+
+		public Builder hairTooltips(String... lines) {
+			this.hairTooltipLines = List.of(lines);
 			return this;
 		}
 

@@ -55,13 +55,13 @@
       },
       {
         "type": "quiufuits:fruit",
-        "probability": 0.06,
-        "fruit_block": "quiufuits:ambar_fruit"
+        "probability": 0.08,
+        "fruit_block": "quiufuits:eburia_fruit"
       },
       {
         "type": "quiufuits:fruit",
-        "probability": 0.05,
-        "fruit_block": "quiufuits:marea_fruit"
+        "probability": 0.07,
+        "fruit_block": "quiufuits:uvina_fruit"
       }
     ]
   }

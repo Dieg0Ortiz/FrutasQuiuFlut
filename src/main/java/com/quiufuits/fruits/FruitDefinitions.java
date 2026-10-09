@@ -20,22 +20,20 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Registro central de fichas de fruta.
+ * Frutas oficiales del mod (según capturas de referencia).
  *
- * <p><b>Fruta Solaria — efecto elegido: Fire Resistance (Resistencia al fuego)</b><br>
- * Tema solar: la fruta concentra calor del sol. En lugar de quemar al jugador,
- * le otorga protección térmica (Fire Resistance). Poco madura = corta;
- * madura = completa; podrida = Hambre (energía solar corrompida).
+ * <p><b>Fruta Solaria — Fire Resistance</b>: calor solar → protección térmica.
+ * <p><b>Huevo Eburia — Health Boost</b>: +4 salud máxima (como en la ficha de referencia).
+ * <p><b>Arándano Nocturino — Night Vision</b>: tema nocturno.
+ * <p><b>Baya Uvina — Regeneration</b>: baya dulce restauradora.
  */
 public final class FruitDefinitions {
 	private static final Map<String, FruitDefinition> BY_ID = new LinkedHashMap<>();
 
 	public static FruitDefinition SOLARIA;
-	public static FruitDefinition GLEBANOIDA;
-	public static FruitDefinition LUNAR;
-	public static FruitDefinition MAREA;
-	public static FruitDefinition BRUMA;
-	public static FruitDefinition AMBAR;
+	public static FruitDefinition EBURIA;
+	public static FruitDefinition NOCTURINO;
+	public static FruitDefinition UVINA;
 
 	private FruitDefinitions() {
 	}
@@ -48,104 +46,89 @@ public final class FruitDefinitions {
 						MobEffects.FIRE_RESISTANCE, 45 * 20, 0,
 						MobEffects.HUNGER, 12 * 20, 0
 				))
-				.plantableOn(() -> ModTags.SOLARIA_PLANTABLE_LOGS)
+				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
-				.hair(true, "solar")
+				.noHair()
 				.mobFeed(FruitDefinition.MobFeedSpec.fromConfig())
 				.tooltips(
-						"item.quiufuits.solaria.tooltip.seed",
-						"item.quiufuits.solaria.tooltip.hair",
-						"item.quiufuits.solaria.tooltip.mob"
+						"item.quiufuits.fruit.find_centro_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.solaria.tooltip.mob",
+						"item.quiufuits.solaria.tooltip.seed"
+				)
+				.seedTooltips(
+						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.solaria.tooltip.seed"
 				)
 				.build());
 
-		GLEBANOIDA = register(FruitDefinition.builder("glebanoida")
-				.color(0x7BC67E)
+		// Huevo Eburia: Salud mejorada 1:00 / Salud máxima +4 (HEALTH_BOOST amp 0)
+		EBURIA = register(FruitDefinition.builder("eburia")
+				.color(0xD4B896)
 				.effects(FruitEffectProfile.of(
-						MobEffects.DIG_SPEED, 10 * 20, 0,
-						MobEffects.DIG_SPEED, 40 * 20, 1,
-						MobEffects.POISON, 8 * 20, 0
+						MobEffects.HEALTH_BOOST, 20 * 20, 0,
+						MobEffects.HEALTH_BOOST, 60 * 20, 0,
+						MobEffects.HUNGER, 15 * 20, 1
 				))
 				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
-				.hair(true, "glebanoide")
-				.mobFeed(FruitDefinition.MobFeedSpec.of("minecraft:cow", "minecraft:leather", 0.40))
+				.hairWithShears("pelos_eburia")
 				.tooltips(
-						"item.quiufuits.glebanoida.tooltip.seed",
-						"item.quiufuits.glebanoida.tooltip.hair",
-						"item.quiufuits.glebanoida.tooltip.mob"
+						"item.quiufuits.fruit.find_centro_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.eburia.tooltip.hair",
+						"item.quiufuits.eburia.tooltip.seed"
 				)
+				.seedTooltips(
+						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.eburia.tooltip.seed"
+				)
+				.hairTooltips("item.quiufuits.eburia.tooltip.hair_item")
 				.build());
 
-		LUNAR = register(FruitDefinition.builder("lunar")
-				.color(0xA8C4FF)
+		NOCTURINO = register(FruitDefinition.builder("nocturino")
+				.color(0x3A5FBF)
 				.effects(FruitEffectProfile.of(
 						MobEffects.NIGHT_VISION, 15 * 20, 0,
 						MobEffects.NIGHT_VISION, 90 * 20, 0,
 						MobEffects.BLINDNESS, 8 * 20, 0
 				))
-				.plantableOn(() -> ModTags.ABEDUL_LOGS)
+				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
-				.hair(true, "lunar")
-				.mobFeed(FruitDefinition.MobFeedSpec.of("minecraft:cat", "minecraft:string", 0.30))
+				.noHair()
 				.tooltips(
-						"item.quiufuits.lunar.tooltip.seed",
-						"item.quiufuits.lunar.tooltip.hair",
-						"item.quiufuits.lunar.tooltip.mob"
+						"item.quiufuits.fruit.find_centro_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.nocturino.tooltip.seed"
+				)
+				.seedTooltips(
+						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.nocturino.tooltip.seed"
 				)
 				.build());
 
-		MAREA = register(FruitDefinition.builder("marea")
-				.color(0x3FA7D6)
+		UVINA = register(FruitDefinition.builder("uvina")
+				.color(0xE05AA8)
 				.effects(FruitEffectProfile.of(
-						MobEffects.WATER_BREATHING, 20 * 20, 0,
-						MobEffects.WATER_BREATHING, 90 * 20, 0,
-						MobEffects.CONFUSION, 10 * 20, 0
-				))
-				.plantableOn(() -> ModTags.QUIU_OAK_LOGS)
-				.seed(true)
-				.hair(true, "marino")
-				.mobFeed(FruitDefinition.MobFeedSpec.of("minecraft:turtle", "minecraft:seagrass", 0.45))
-				.tooltips(
-						"item.quiufuits.marea.tooltip.seed",
-						"item.quiufuits.marea.tooltip.hair",
-						"item.quiufuits.marea.tooltip.mob"
-				)
-				.build());
-
-		BRUMA = register(FruitDefinition.builder("bruma")
-				.color(0xC9C2D8)
-				.effects(FruitEffectProfile.of(
-						MobEffects.SLOW_FALLING, 12 * 20, 0,
-						MobEffects.SLOW_FALLING, 45 * 20, 0,
-						MobEffects.MOVEMENT_SLOWDOWN, 12 * 20, 0
+						MobEffects.REGENERATION, 5 * 20, 0,
+						MobEffects.REGENERATION, 12 * 20, 0,
+						MobEffects.POISON, 8 * 20, 0
 				))
 				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
 				.seed(true)
-				.hair(true, "bruma")
-				.mobFeed(FruitDefinition.MobFeedSpec.of("minecraft:phantom", "minecraft:phantom_membrane", 0.25))
+				.noHair()
 				.tooltips(
-						"item.quiufuits.bruma.tooltip.seed",
-						"item.quiufuits.bruma.tooltip.hair",
-						"item.quiufuits.bruma.tooltip.mob"
+						"item.quiufuits.fruit.find_centro_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.uvina.tooltip.seed"
 				)
-				.build());
-
-		AMBAR = register(FruitDefinition.builder("ambar")
-				.color(0xE0A100)
-				.effects(FruitEffectProfile.of(
-						MobEffects.DAMAGE_RESISTANCE, 10 * 20, 0,
-						MobEffects.DAMAGE_RESISTANCE, 35 * 20, 0,
-						MobEffects.WEAKNESS, 15 * 20, 0
-				))
-				.plantableOn(() -> ModTags.QUIU_OAK_LOGS)
-				.seed(true)
-				.hair(true, "ambarino")
-				.mobFeed(FruitDefinition.MobFeedSpec.of("minecraft:bee", "minecraft:honeycomb", 0.35))
-				.tooltips(
-						"item.quiufuits.ambar.tooltip.seed",
-						"item.quiufuits.ambar.tooltip.hair",
-						"item.quiufuits.ambar.tooltip.mob"
+				.seedTooltips(
+						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.fruit.warning",
+						"item.quiufuits.uvina.tooltip.seed"
 				)
 				.build());
 
@@ -176,11 +159,10 @@ public final class FruitDefinitions {
 		FruitHairItem hair = null;
 		if (def.hasHair()) {
 			hair = new FruitHairItem(() -> def, new Item.Properties());
-			String hairId = def.hairNameKey() != null ? "pelo_" + def.hairNameKey() : id + "_hair";
+			String hairId = def.hairItemId() != null ? def.hairItemId() : id + "_hair";
 			ModItems.register(hairId, hair);
 		}
 
-		// BlockItem for the crop (creative / debug)
 		ModItems.register(id + "_fruit_block", new net.minecraft.world.item.BlockItem(crop, new Item.Properties()));
 
 		def.bind(crop, fruit, seed, hair);

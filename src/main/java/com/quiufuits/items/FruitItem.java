@@ -81,15 +81,19 @@ public class FruitItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
 		FruitStage stage = getStage(stack);
-		tooltip.add(Component.translatable("item.quiufuits.fruit.stage." + stage.getTranslationKey())
-				.withStyle(stageStyle(stage)));
-
-		tooltip.add(Component.literal(""));
-		tooltip.add(Component.translatable("item.quiufuits.fruit.warning")
-				.withStyle(ChatFormatting.GOLD));
+		if (stage != FruitStage.RIPE) {
+			tooltip.add(Component.translatable("item.quiufuits.fruit.stage." + stage.getTranslationKey())
+					.withStyle(stageStyle(stage)));
+		}
 
 		for (String lineKey : definition().tooltipLines()) {
-			tooltip.add(Component.translatable(lineKey));
+			ChatFormatting style = lineKey.contains("warning") ? ChatFormatting.GOLD : null;
+			Component line = Component.translatable(lineKey);
+			if (style != null) {
+				tooltip.add(line.copy().withStyle(style));
+			} else {
+				tooltip.add(line);
+			}
 		}
 	}
 

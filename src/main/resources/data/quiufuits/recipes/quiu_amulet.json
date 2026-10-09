@@ -1,28 +1,25 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "SGL",
-    "MB ",
-    "A  "
+    "PES",
+    "NU ",
+    "   "
   ],
   "key": {
+    "P": {
+      "item": "quiufuits:pelos_eburia"
+    },
+    "E": {
+      "item": "quiufuits:eburia_fruit"
+    },
     "S": {
-      "item": "quiufuits:pelo_solar"
+      "item": "quiufuits:solaria_fruit"
     },
-    "G": {
-      "item": "quiufuits:pelo_glebanoide"
+    "N": {
+      "item": "quiufuits:nocturino_fruit"
     },
-    "L": {
-      "item": "quiufuits:pelo_lunar"
-    },
-    "M": {
-      "item": "quiufuits:pelo_marino"
-    },
-    "B": {
-      "item": "quiufuits:pelo_bruma"
-    },
-    "A": {
-      "item": "quiufuits:pelo_ambarino"
+    "U": {
+      "item": "quiufuits:uvina_fruit"
     }
   },
   "result": {

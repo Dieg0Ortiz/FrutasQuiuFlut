@@ -11,7 +11,6 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -129,17 +128,7 @@ public class FruitCropBlock extends Block {
 	@Override
 	public InteractionResult use(BlockState state, Level level, BlockPos pos, Player player,
 			InteractionHand hand, BlockHitResult hit) {
-		ItemStack held = player.getItemInHand(hand);
 		FruitStage stage = state.getValue(STAGE);
-
-		// Extraer pelos con espada
-		if (held.getItem() instanceof SwordItem && definition().hasHair() && definition().hairItem() != null) {
-			if (!level.isClientSide) {
-				popResource(level, pos, new ItemStack(definition().hairItem()));
-				held.hurtAndBreak(1, player, p -> p.broadcastBreakEvent(hand));
-			}
-			return InteractionResult.sidedSuccess(level.isClientSide);
-		}
 
 		// Quitar fruta podrida para reiniciar el ciclo (se cae / desaparece)
 		if (stage == FruitStage.ROTTEN) {

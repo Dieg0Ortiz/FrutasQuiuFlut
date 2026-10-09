@@ -18,41 +18,27 @@
   "block.quiufuits.abedul_planks": "Tablones de Abedúl",
 
   "block.quiufuits.solaria_fruit": "Fruta Solaria (cultivo)",
-  "block.quiufuits.glebanoida_fruit": "Fruta Glebanoida (cultivo)",
-  "block.quiufuits.lunar_fruit": "Fruta Lunar (cultivo)",
-  "block.quiufuits.marea_fruit": "Fruta de Marea (cultivo)",
-  "block.quiufuits.bruma_fruit": "Fruta de Bruma (cultivo)",
-  "block.quiufuits.ambar_fruit": "Fruta de Ámbar (cultivo)",
+  "block.quiufuits.eburia_fruit": "Huevo Eburia (cultivo)",
+  "block.quiufuits.nocturino_fruit": "Arándano Nocturino (cultivo)",
+  "block.quiufuits.uvina_fruit": "Baya Uvina (cultivo)",
 
   "item.quiufuits.solaria_fruit": "Fruta Solaria",
-  "item.quiufuits.glebanoida_fruit": "Fruta Glebanoida",
-  "item.quiufuits.lunar_fruit": "Fruta Lunar",
-  "item.quiufuits.marea_fruit": "Fruta de Marea",
-  "item.quiufuits.bruma_fruit": "Fruta de Bruma",
-  "item.quiufuits.ambar_fruit": "Fruta de Ámbar",
+  "item.quiufuits.eburia_fruit": "Huevo Eburia",
+  "item.quiufuits.nocturino_fruit": "Arándano Nocturino",
+  "item.quiufuits.uvina_fruit": "Baya Uvina",
 
   "item.quiufuits.solaria_seed": "Semilla de Fruta Solaria",
-  "item.quiufuits.glebanoida_seed": "Semilla de Fruta Glebanoida",
-  "item.quiufuits.lunar_seed": "Semilla de Fruta Lunar",
-  "item.quiufuits.marea_seed": "Semilla de Fruta de Marea",
-  "item.quiufuits.bruma_seed": "Semilla de Fruta de Bruma",
-  "item.quiufuits.ambar_seed": "Semilla de Fruta de Ámbar",
+  "item.quiufuits.eburia_seed": "Semilla de Huevo Eburia",
+  "item.quiufuits.nocturino_seed": "Semilla de Arándano Nocturino",
+  "item.quiufuits.uvina_seed": "Semilla de Baya Uvina",
 
   "item.quiufuits.solaria_fruit_block": "Fruta Solaria (bloque)",
-  "item.quiufuits.glebanoida_fruit_block": "Fruta Glebanoida (bloque)",
-  "item.quiufuits.lunar_fruit_block": "Fruta Lunar (bloque)",
-  "item.quiufuits.marea_fruit_block": "Fruta de Marea (bloque)",
-  "item.quiufuits.bruma_fruit_block": "Fruta de Bruma (bloque)",
-  "item.quiufuits.ambar_fruit_block": "Fruta de Ámbar (bloque)",
+  "item.quiufuits.eburia_fruit_block": "Huevo Eburia (bloque)",
+  "item.quiufuits.nocturino_fruit_block": "Arándano Nocturino (bloque)",
+  "item.quiufuits.uvina_fruit_block": "Baya Uvina (bloque)",
 
-  "item.quiufuits.pelo_solar": "Pelo Solar",
-  "item.quiufuits.pelo_glebanoide": "Pelo Glebanoide",
-  "item.quiufuits.pelo_lunar": "Pelo Lunar",
-  "item.quiufuits.pelo_marino": "Pelo Marino",
-  "item.quiufuits.pelo_bruma": "Pelo de Bruma",
-  "item.quiufuits.pelo_ambarino": "Pelo Ambarino",
+  "item.quiufuits.pelos_eburia": "Pelos de Eburia",
   "item.quiufuits.hair.tooltip": "No se come. Solo sirve para crafteos.",
-
   "item.quiufuits.quiu_amulet": "Amuleto de Quiu",
 
   "item.quiufuits.fruit.stage.creciendo": "Creciendo",
@@ -60,29 +46,17 @@
   "item.quiufuits.fruit.stage.maduro": "Maduro",
   "item.quiufuits.fruit.stage.podrido": "Podrido",
 
-  "item.quiufuits.fruit.warning": "⚠ Atención: al alcanzar su punto máximo de crecimiento debes recogerla lo antes posible. Después de un tiempo se pudrirá si no la cosechas.",
+  "item.quiufuits.fruit.find_centro_quiu": "Encuéntralo y coséchalo en los árboles del Centro de Quiu.",
+  "item.quiufuits.fruit.warning": "⚠ Atención: al alcanzar su punto máximo de crecimiento debes recogerlo lo antes posible. Después de un tiempo se pudrirá si no lo cosechas.",
+  "item.quiufuits.seed.plant_abedul_quiu": "Puedes plantarla en §fTroncos de Abedúl§r y §fRoble de Quiu§r para hacerla crecer.",
 
-  "item.quiufuits.solaria.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la Fruta en la §bMano Secundaria§r para extraer la §aSemilla§r.",
-  "item.quiufuits.solaria.tooltip.hair": "Clic derecho sobre la fruta del tronco con una §cEspada§r para extraer §6Pelo Solar§r.",
-  "item.quiufuits.solaria.tooltip.mob": "Alimenta a un §dPlumosaurio§r para tener probabilidad de soltar §7Excremento§r. (integración pendiente)",
+  "item.quiufuits.solaria.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la §bFruta§r en la §bMano Secundaria§r para extraer la §aSemilla§r.",
+  "item.quiufuits.solaria.tooltip.mob": "Dale de comer la Fruta a un §dPlumosaurio§r para tener la probabilidad de que suelte §7Excremento§r.",
 
-  "item.quiufuits.glebanoida.tooltip.seed": "Utiliza un §eHacha§r con la fruta en la §bMano Secundaria§r para extraer la §aSemilla§r.",
-  "item.quiufuits.glebanoida.tooltip.hair": "Clic derecho con una §cEspada§r para extraer §aPelo Glebanoide§r.",
-  "item.quiufuits.glebanoida.tooltip.mob": "Alimenta a una §dVaca§r para tener probabilidad de soltar §7Cuero§r.",
+  "item.quiufuits.eburia.tooltip.seed": "Utiliza un §eHacha§r mientras tienes un §bHuevo§r en la §bMano Secundaria§r para extraer la §aSemilla§r.",
+  "item.quiufuits.eburia.tooltip.hair": "Utiliza unas §eTijeras§r mientras tienes el §bHuevo§r en la §bMano Secundaria§r para extraer §6Pelo de Eburia§r.",
+  "item.quiufuits.eburia.tooltip.hair_item": "Utiliza unas §eTijeras§r mientras tienes el §bHuevo Eburia§r en la §bMano Secundaria§r para conseguirlos.",
 
-  "item.quiufuits.lunar.tooltip.seed": "Utiliza un §eHacha§r con la fruta en la §bMano Secundaria§r para extraer la §aSemilla§r (plantar en troncos de Abedúl).",
-  "item.quiufuits.lunar.tooltip.hair": "Clic derecho con una §cEspada§r para extraer §9Pelo Lunar§r.",
-  "item.quiufuits.lunar.tooltip.mob": "Alimenta a un §dGato§r para tener probabilidad de soltar §7Hilo§r.",
-
-  "item.quiufuits.marea.tooltip.seed": "Utiliza un §eHacha§r con la fruta en la §bMano Secundaria§r para extraer la §aSemilla§r.",
-  "item.quiufuits.marea.tooltip.hair": "Clic derecho con una §cEspada§r para extraer §3Pelo Marino§r.",
-  "item.quiufuits.marea.tooltip.mob": "Alimenta a una §dTortuga§r para tener probabilidad de soltar §7Hierba marina§r.",
-
-  "item.quiufuits.bruma.tooltip.seed": "Utiliza un §eHacha§r con la fruta en la §bMano Secundaria§r para extraer la §aSemilla§r.",
-  "item.quiufuits.bruma.tooltip.hair": "Clic derecho con una §cEspada§r para extraer §7Pelo de Bruma§r.",
-  "item.quiufuits.bruma.tooltip.mob": "Alimenta a un §dFantasma§r para tener probabilidad de soltar §7Membrana de fantasma§r.",
-
-  "item.quiufuits.ambar.tooltip.seed": "Utiliza un §eHacha§r con la fruta en la §bMano Secundaria§r para extraer la §aSemilla§r.",
-  "item.quiufuits.ambar.tooltip.hair": "Clic derecho con una §cEspada§r para extraer §6Pelo Ambarino§r.",
-  "item.quiufuits.ambar.tooltip.mob": "Alimenta a una §dAbeja§r para tener probabilidad de soltar §7Panal§r."
+  "item.quiufuits.nocturino.tooltip.seed": "Utiliza un §eHacha§r mientras tienes un §bArándano§r en la §bMano Secundaria§r para extraerla.",
+  "item.quiufuits.uvina.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la §bBaya Uvina§r en la §bMano Secundaria§r para extraerla."
 }

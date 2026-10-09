@@ -50,18 +50,18 @@
     "decorators": [
       {
         "type": "quiufuits:fruit",
-        "probability": 0.10,
-        "fruit_block": "quiufuits:lunar_fruit"
+        "probability": 0.12,
+        "fruit_block": "quiufuits:nocturino_fruit"
       },
       {
         "type": "quiufuits:fruit",
         "probability": 0.08,
-        "fruit_block": "quiufuits:glebanoida_fruit"
+        "fruit_block": "quiufuits:eburia_fruit"
       },
       {
         "type": "quiufuits:fruit",
-        "probability": 0.05,
-        "fruit_block": "quiufuits:bruma_fruit"
+        "probability": 0.06,
+        "fruit_block": "quiufuits:solaria_fruit"
       }
     ]
   }

@@ -26,6 +26,13 @@ public class FruitHairItem extends Item {
 
 	@Override
 	public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-		tooltip.add(Component.translatable("item.quiufuits.hair.tooltip"));
+		List<String> lines = definition().hairTooltipLines();
+		if (lines.isEmpty()) {
+			tooltip.add(Component.translatable("item.quiufuits.hair.tooltip"));
+			return;
+		}
+		for (String lineKey : lines) {
+			tooltip.add(Component.translatable(lineKey));
+		}
 	}
 }
