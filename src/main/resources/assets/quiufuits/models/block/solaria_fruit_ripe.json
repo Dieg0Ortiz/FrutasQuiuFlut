@@ -1,20 +1,102 @@
 {
+  "parent": "minecraft:block/block",
   "ambientocclusion": false,
   "textures": {
     "particle": "quiufuits:block/solaria_fruit_ripe",
-    "fruit": "quiufuits:block/solaria_fruit_ripe"
+    "fruit": "quiufuits:block/solaria_fruit_ripe",
+    "leaf": "quiufuits:block/solaria_fruit_leaf"
   },
   "elements": [
     {
-      "from": [6, 7, 11],
-      "to": [10, 12, 15],
+      "name": "body_x",
+      "from": [1.5, 2.75, 2.25],
+      "to": [14.5, 13.25, 12.75],
       "faces": {
-        "north": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "south": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "west": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "east": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "up": {"uv": [4, 4, 12, 12], "texture": "#fruit"},
-        "down": {"uv": [4, 4, 12, 12], "texture": "#fruit"}
+        "north": {"uv": [1.5, 1.15, 14.5, 10.85], "texture": "#fruit"},
+        "south": {"uv": [1.5, 1.15, 14.5, 10.85], "texture": "#fruit"},
+        "up": {"uv": [1.5, 1.15, 14.5, 10.85], "texture": "#fruit"},
+        "down": {"uv": [1.5, 10.85, 14.5, 1.15], "texture": "#fruit"},
+        "east": {"uv": [2.75, 1.15, 13.25, 10.85], "texture": "#fruit", "rotation": 90},
+        "west": {"uv": [2.75, 1.15, 13.25, 10.85], "texture": "#fruit", "rotation": 270}
+      }
+    },
+    {
+      "name": "body_y",
+      "from": [2.75, 1.5, 2.25],
+      "to": [13.25, 14.5, 12.75],
+      "faces": {
+        "north": {"uv": [2.75, 0, 13.25, 12], "texture": "#fruit"},
+        "south": {"uv": [2.75, 0, 13.25, 12], "texture": "#fruit"},
+        "up": {"uv": [2.75, 1.15, 13.25, 10.85], "texture": "#fruit"},
+        "down": {"uv": [2.75, 10.85, 13.25, 1.15], "texture": "#fruit"},
+        "east": {"uv": [1.5, 1.15, 14.5, 10.85], "texture": "#fruit", "rotation": 90},
+        "west": {"uv": [1.5, 1.15, 14.5, 10.85], "texture": "#fruit", "rotation": 270}
+      }
+    },
+    {
+      "name": "body_z",
+      "from": [2.75, 2.75, 1],
+      "to": [13.25, 13.25, 14],
+      "faces": {
+        "north": {"uv": [2.75, 1.15, 13.25, 10.85], "texture": "#fruit"},
+        "south": {"uv": [2.75, 1.15, 13.25, 10.85], "texture": "#fruit"},
+        "up": {"uv": [2.75, 0, 13.25, 12], "texture": "#fruit"},
+        "down": {"uv": [2.75, 12, 13.25, 0], "texture": "#fruit"},
+        "east": {"uv": [2.75, 0, 13.25, 12], "texture": "#fruit", "rotation": 90},
+        "west": {"uv": [2.75, 0, 13.25, 12], "texture": "#fruit", "rotation": 270}
+      }
+    },
+    {
+      "name": "stem",
+      "from": [5.4, 5.4, 14],
+      "to": [10.6, 10.6, 16],
+      "faces": {
+        "east": {"uv": [0, 13, 2, 16], "texture": "#fruit"},
+        "west": {"uv": [0, 13, 2, 16], "texture": "#fruit"},
+        "up": {"uv": [0, 13, 5.2, 15], "texture": "#fruit"},
+        "down": {"uv": [0, 13, 5.2, 15], "texture": "#fruit"}
+      }
+    },
+    {
+      "name": "leaf_v0",
+      "from": [8, -1.5, -7.5],
+      "to": [8, 17.5, 1.5],
+      "shade": false,
+      "faces": {
+        "east": {"uv": [0, 0, 16, 16], "texture": "#leaf", "rotation": 90},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#leaf", "rotation": 270}
+      }
+    },
+    {
+      "name": "leaf_v45",
+      "from": [8, -1.5, -7.5],
+      "to": [8, 17.5, 1.5],
+      "rotation": {"origin": [8, 8, 1.5], "axis": "z", "angle": 45},
+      "shade": false,
+      "faces": {
+        "east": {"uv": [0, 0, 16, 16], "texture": "#leaf", "rotation": 90},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#leaf", "rotation": 270}
+      }
+    },
+    {
+      "name": "leaf_v-45",
+      "from": [8, -1.5, -7.5],
+      "to": [8, 17.5, 1.5],
+      "rotation": {"origin": [8, 8, 1.5], "axis": "z", "angle": -45},
+      "shade": false,
+      "faces": {
+        "east": {"uv": [0, 0, 16, 16], "texture": "#leaf", "rotation": 90},
+        "west": {"uv": [0, 0, 16, 16], "texture": "#leaf", "rotation": 270}
+      }
+    },
+    {
+      "name": "leaf_h",
+      "from": [-1.5, 8, -7.5],
+      "to": [17.5, 8, 1.5],
+      "shade": false,
+      "faces": {
+        "up": {"uv": [0, 0, 16, 16], "texture": "#leaf"},
+        "down": {"uv": [0, 16, 16, 0], "texture": "#leaf"}
       }
     }
   ]

@@ -30,16 +30,16 @@
       }
     },
     "trunk_placer": {
-      "type": "minecraft:straight_trunk_placer",
-      "base_height": 6,
-      "height_rand_a": 2,
-      "height_rand_b": 1
+      "type": "quiufuits:quiu_primitive_trunk_placer",
+      "base_height": 18,
+      "height_rand_a": 6,
+      "height_rand_b": 4,
+      "thick_chance": 0.3
     },
     "foliage_placer": {
-      "type": "minecraft:blob_foliage_placer",
+      "type": "quiufuits:quiu_primitive_foliage_placer",
       "radius": 2,
-      "offset": 0,
-      "height": 3
+      "offset": 0
     },
     "minimum_size": {
       "type": "minecraft:two_layers_feature_size",
@@ -50,18 +50,13 @@
     "decorators": [
       {
         "type": "quiufuits:fruit",
-        "probability": 0.12,
-        "fruit_block": "quiufuits:nocturino_fruit"
-      },
-      {
-        "type": "quiufuits:fruit",
         "probability": 0.08,
-        "fruit_block": "quiufuits:eburia_fruit"
-      },
-      {
-        "type": "quiufuits:fruit",
-        "probability": 0.06,
-        "fruit_block": "quiufuits:solaria_fruit"
+        "sheltered_multiplier": 6.0,
+        "min_height_fraction": 0.5,
+        "fruit_blocks": [
+          "quiufuits:uvina_fruit",
+          "quiufuits:eburia_fruit"
+        ]
       }
     ]
   }

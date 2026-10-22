@@ -48,7 +48,8 @@
 
   "item.quiufuits.fruit.find_centro_quiu": "Encuéntralo y coséchalo en los árboles del Centro de Quiu.",
   "item.quiufuits.fruit.warning": "⚠ Atención: al alcanzar su punto máximo de crecimiento debes recogerlo lo antes posible. Después de un tiempo se pudrirá si no lo cosechas.",
-  "item.quiufuits.seed.plant_abedul_quiu": "Puedes plantarla en §fTroncos de Abedúl§r y §fRoble de Quiu§r para hacerla crecer.",
+  "item.quiufuits.seed.plant_abedul": "Puedes plantarla en §fTroncos de Abedúl Quiu§r para hacerla crecer.",
+  "item.quiufuits.seed.plant_quiu_oak": "Puedes plantarla en §fTroncos de Roble de Quiu§r para hacerla crecer.",
 
   "item.quiufuits.solaria.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la §bFruta§r en la §bMano Secundaria§r para extraer la §aSemilla§r.",
   "item.quiufuits.solaria.tooltip.mob": "Dale de comer la Fruta a un §dPlumosaurio§r para tener la probabilidad de que suelte §7Excremento§r.",

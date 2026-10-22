@@ -1,10 +1,12 @@
 package com.quiufuits.fruits;
 
 import com.quiufuits.blocks.fruit.FruitCropBlock;
+import com.quiufuits.blocks.fruit.FruitStage;
 import com.quiufuits.items.FruitHairItem;
 import com.quiufuits.items.FruitItem;
 import com.quiufuits.items.FruitSeedItem;
 import net.minecraft.tags.TagKey;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.block.Block;
 import org.jetbrains.annotations.Nullable;
 
@@ -31,6 +33,9 @@ public final class FruitDefinition {
 	private final List<String> tooltipLines;
 	private final List<String> seedTooltipLines;
 	private final List<String> hairTooltipLines;
+	private final int minDrops;
+	private final int maxDrops;
+	private final int ripeLightLevel;
 	@Nullable
 	private FruitCropBlock cropBlock;
 	@Nullable
@@ -52,6 +57,9 @@ public final class FruitDefinition {
 		this.tooltipLines = List.copyOf(builder.tooltipLines);
 		this.seedTooltipLines = List.copyOf(builder.seedTooltipLines);
 		this.hairTooltipLines = List.copyOf(builder.hairTooltipLines);
+		this.minDrops = builder.minDrops;
+		this.maxDrops = builder.maxDrops;
+		this.ripeLightLevel = builder.ripeLightLevel;
 	}
 
 	public String id() {
@@ -101,6 +109,21 @@ public final class FruitDefinition {
 
 	public List<String> hairTooltipLines() {
 		return hairTooltipLines;
+	}
+
+	/** Cantidad de frutas al cosechar (entre min y max, ambos incluidos). */
+	public int rollDropCount(RandomSource random) {
+		return minDrops + random.nextInt(maxDrops - minDrops + 1);
+	}
+
+	/** Luz que emite el cultivo según su etapa (0 = no brilla). */
+	public int lightLevel(FruitStage stage) {
+		return switch (stage) {
+			case RIPE -> ripeLightLevel;
+			case UNDER_RIPE -> Math.max(0, ripeLightLevel - 2);
+			case GROWING -> Math.max(0, ripeLightLevel - 4);
+			case ROTTEN -> 0;
+		};
 	}
 
 	public FruitCropBlock cropBlock() {
@@ -165,6 +188,9 @@ public final class FruitDefinition {
 		private List<String> tooltipLines = Collections.emptyList();
 		private List<String> seedTooltipLines = Collections.emptyList();
 		private List<String> hairTooltipLines = Collections.emptyList();
+		private int minDrops = 1;
+		private int maxDrops = 1;
+		private int ripeLightLevel = 0;
 
 		private Builder(String id) {
 			this.id = id;
@@ -220,6 +246,22 @@ public final class FruitDefinition {
 
 		public Builder hairTooltips(String... lines) {
 			this.hairTooltipLines = List.of(lines);
+			return this;
+		}
+
+		/** Frutas que suelta al cosecharla (poco madura o madura). */
+		public Builder dropCount(int min, int max) {
+			if (min < 1 || max < min) {
+				throw new IllegalArgumentException("dropCount inválido: " + min + ".." + max);
+			}
+			this.minDrops = min;
+			this.maxDrops = max;
+			return this;
+		}
+
+		/** Brillo leve en la oscuridad: luz al estar madura (menos en etapas anteriores). */
+		public Builder glow(int ripeLightLevel) {
+			this.ripeLightLevel = ripeLightLevel;
 			return this;
 		}
 

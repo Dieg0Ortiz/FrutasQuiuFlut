@@ -19,10 +19,11 @@ public final class ModConfig {
 	private static final Gson GSON = new GsonBuilder().setPrettyPrinting().disableHtmlEscaping().create();
 	private static ModConfig INSTANCE = new ModConfig();
 
-	/** Probabilidad base (1/N) de avanzar etapa en cada random tick. */
-	public int stageAdvanceChance = 5;
-	/** Probabilidad (1/N) de pasar de Maduro a Podrido (más lento = más margen de cosecha). */
-	public int ripeToRottenChance = 8;
+	/** Días de Minecraft (24000 ticks) desde recién cultivada hasta madura: entre el mínimo y el máximo. */
+	public double minDaysToRipe = 4.0;
+	public double maxDaysToRipe = 5.0;
+	/** Días de Minecraft que tarda una fruta madura en pudrirse. */
+	public double daysToRot = 7.0;
 	/** Nutrición base de las frutas. */
 	public int fruitNutrition = 3;
 	public float fruitSaturation = 0.4f;

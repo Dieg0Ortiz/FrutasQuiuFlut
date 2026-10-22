@@ -46,7 +46,7 @@ public final class FruitDefinitions {
 						MobEffects.FIRE_RESISTANCE, 8 * 20, 0,
 						MobEffects.FIRE_RESISTANCE, 45 * 20, 0
 				))
-				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
+				.plantableOn(() -> ModTags.QUIU_OAK_LOGS)
 				.seed(true)
 				.noHair()
 				.mobFeed(FruitDefinition.MobFeedSpec.fromConfig())
@@ -57,7 +57,7 @@ public final class FruitDefinitions {
 						"item.quiufuits.solaria.tooltip.seed"
 				)
 				.seedTooltips(
-						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.seed.plant_quiu_oak",
 						"item.quiufuits.fruit.warning",
 						"item.quiufuits.solaria.tooltip.seed"
 				)
@@ -70,7 +70,7 @@ public final class FruitDefinitions {
 						MobEffects.HEALTH_BOOST, 20 * 20, 0,
 						MobEffects.HEALTH_BOOST, 60 * 20, 0
 				))
-				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
+				.plantableOn(() -> ModTags.ABEDUL_LOGS)
 				.seed(true)
 				.hairWithShears("pelos_eburia")
 				.tooltips(
@@ -80,7 +80,7 @@ public final class FruitDefinitions {
 						"item.quiufuits.eburia.tooltip.seed"
 				)
 				.seedTooltips(
-						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.seed.plant_abedul",
 						"item.quiufuits.fruit.warning",
 						"item.quiufuits.eburia.tooltip.seed"
 				)
@@ -93,16 +93,19 @@ public final class FruitDefinitions {
 						MobEffects.NIGHT_VISION, 15 * 20, 0,
 						MobEffects.NIGHT_VISION, 90 * 20, 0
 				))
-				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
+				.plantableOn(() -> ModTags.QUIU_OAK_LOGS)
 				.seed(true)
 				.noHair()
+				// Racimo de arándanos: suelta 5–8; brilla levemente en la oscuridad (visión nocturna)
+				.dropCount(5, 8)
+				.glow(5)
 				.tooltips(
 						"item.quiufuits.fruit.find_centro_quiu",
 						"item.quiufuits.fruit.warning",
 						"item.quiufuits.nocturino.tooltip.seed"
 				)
 				.seedTooltips(
-						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.seed.plant_quiu_oak",
 						"item.quiufuits.fruit.warning",
 						"item.quiufuits.nocturino.tooltip.seed"
 				)
@@ -114,7 +117,7 @@ public final class FruitDefinitions {
 						MobEffects.REGENERATION, 5 * 20, 0,
 						MobEffects.REGENERATION, 12 * 20, 0
 				))
-				.plantableOn(() -> ModTags.FRUIT_PLANTABLE_LOGS)
+				.plantableOn(() -> ModTags.ABEDUL_LOGS)
 				.seed(true)
 				.noHair()
 				.tooltips(
@@ -123,7 +126,7 @@ public final class FruitDefinitions {
 						"item.quiufuits.uvina.tooltip.seed"
 				)
 				.seedTooltips(
-						"item.quiufuits.seed.plant_abedul_quiu",
+						"item.quiufuits.seed.plant_abedul",
 						"item.quiufuits.fruit.warning",
 						"item.quiufuits.uvina.tooltip.seed"
 				)
@@ -141,7 +144,8 @@ public final class FruitDefinitions {
 
 	private static void materialize(FruitDefinition def) {
 		String id = def.id();
-		FruitCropBlock crop = new FruitCropBlock(() -> def, ModBlocks.fruitSettings());
+		FruitCropBlock crop = new FruitCropBlock(() -> def, ModBlocks.fruitSettings()
+				.lightLevel(state -> def.lightLevel(state.getValue(FruitCropBlock.STAGE))));
 		Registry.register(BuiltInRegistries.BLOCK, QuiuFruitsMod.id(id + "_fruit"), crop);
 
 		FruitItem fruit = new FruitItem(() -> def, new Item.Properties());

@@ -1,20 +1,114 @@
 {
+  "parent": "minecraft:block/block",
   "ambientocclusion": false,
   "textures": {
     "particle": "quiufuits:block/uvina_fruit_growing",
-    "fruit": "quiufuits:block/uvina_fruit_growing"
+    "fruit": "quiufuits:block/uvina_fruit_growing",
+    "leaf": "quiufuits:block/uvina_fruit_hang_leaf"
   },
   "elements": [
     {
-      "from": [6, 7, 11],
-      "to": [10, 12, 15],
+      "name": "leaf_base",
+      "from": [5, 16, 12.5],
+      "to": [11, 16, 16],
+      "rotation": {"origin": [8, 16, 16], "axis": "x", "angle": -22.5},
+      "shade": false,
       "faces": {
-        "north": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "south": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "west": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "east": {"uv": [4, 4, 12, 14], "texture": "#fruit"},
-        "up": {"uv": [4, 4, 12, 12], "texture": "#fruit"},
-        "down": {"uv": [4, 4, 12, 12], "texture": "#fruit"}
+        "up": {"uv": [0, 6.67, 16, 16], "texture": "#leaf"},
+        "down": {"uv": [0, 16, 16, 6.67], "texture": "#leaf"}
+      }
+    },
+    {
+      "name": "leaf_tip",
+      "from": [5, 14.66, 10.27],
+      "to": [11, 14.66, 12.77],
+      "rotation": {"origin": [8, 14.660607986722185, 12.766421636210497], "axis": "x", "angle": -45},
+      "shade": false,
+      "faces": {
+        "up": {"uv": [0, 0, 16, 6.67], "texture": "#leaf"},
+        "down": {"uv": [0, 6.67, 16, 0], "texture": "#leaf"}
+      }
+    },
+    {
+      "name": "left_pod_wide",
+      "from": [4.75, 9.09, 9.75],
+      "to": [8.25, 12.59, 12.25],
+      "rotation": {"origin": [8, 13.092841033755816, 10.998654683244128], "axis": "z", "angle": -22.5},
+      "faces": {
+        "north": {"uv": [0, 3.5, 3.5, 7], "texture": "#fruit"},
+        "south": {"uv": [0, 3.5, 3.5, 7], "texture": "#fruit"},
+        "east": {"uv": [0, 3.5, 2.5, 7], "texture": "#fruit"},
+        "west": {"uv": [0, 3.5, 2.5, 7], "texture": "#fruit"},
+        "up": {"uv": [12.5, 0, 16, 2.5], "texture": "#fruit"},
+        "down": {"uv": [12.5, 13.5, 16, 16], "texture": "#fruit"}
+      }
+    },
+    {
+      "name": "left_pod_tall",
+      "from": [5.25, 8.59, 9.25],
+      "to": [7.75, 13.09, 12.75],
+      "rotation": {"origin": [8, 13.092841033755816, 10.998654683244128], "axis": "z", "angle": -22.5},
+      "faces": {
+        "north": {"uv": [0, 3, 2.5, 7.5], "texture": "#fruit"},
+        "south": {"uv": [0, 3, 2.5, 7.5], "texture": "#fruit"},
+        "east": {"uv": [0, 3, 3.5, 7.5], "texture": "#fruit"},
+        "west": {"uv": [0, 3, 3.5, 7.5], "texture": "#fruit"},
+        "up": {"uv": [13.5, 0, 16, 3.5], "texture": "#fruit"},
+        "down": {"uv": [13.5, 12.5, 16, 16], "texture": "#fruit"}
+      }
+    },
+    {
+      "name": "left_pod_tip",
+      "from": [5.75, 8.09, 10.25],
+      "to": [7.25, 8.59, 11.75],
+      "rotation": {"origin": [8, 13.092841033755816, 10.998654683244128], "axis": "z", "angle": -22.5},
+      "faces": {
+        "north": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "south": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "east": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "west": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "down": {"uv": [14.5, 14.5, 16, 16], "texture": "#fruit"}
+      }
+    },
+    {
+      "name": "right_pod_wide",
+      "from": [7.75, 9.09, 9.75],
+      "to": [11.25, 12.59, 12.25],
+      "rotation": {"origin": [8, 13.092841033755816, 10.998654683244128], "axis": "z", "angle": 22.5},
+      "faces": {
+        "north": {"uv": [6.5, 3.5, 10, 7], "texture": "#fruit"},
+        "south": {"uv": [6.5, 3.5, 10, 7], "texture": "#fruit"},
+        "east": {"uv": [0, 3.5, 2.5, 7], "texture": "#fruit"},
+        "west": {"uv": [0, 3.5, 2.5, 7], "texture": "#fruit"},
+        "up": {"uv": [12.5, 0, 16, 2.5], "texture": "#fruit"},
+        "down": {"uv": [12.5, 13.5, 16, 16], "texture": "#fruit"}
+      }
+    },
+    {
+      "name": "right_pod_tall",
+      "from": [8.25, 8.59, 9.25],
+      "to": [10.75, 13.09, 12.75],
+      "rotation": {"origin": [8, 13.092841033755816, 10.998654683244128], "axis": "z", "angle": 22.5},
+      "faces": {
+        "north": {"uv": [6.5, 3, 9, 7.5], "texture": "#fruit"},
+        "south": {"uv": [6.5, 3, 9, 7.5], "texture": "#fruit"},
+        "east": {"uv": [0, 3, 3.5, 7.5], "texture": "#fruit"},
+        "west": {"uv": [0, 3, 3.5, 7.5], "texture": "#fruit"},
+        "up": {"uv": [13.5, 0, 16, 3.5], "texture": "#fruit"},
+        "down": {"uv": [13.5, 12.5, 16, 16], "texture": "#fruit"}
+      }
+    },
+    {
+      "name": "right_pod_tip",
+      "from": [8.75, 8.09, 10.25],
+      "to": [10.25, 8.59, 11.75],
+      "rotation": {"origin": [8, 13.092841033755816, 10.998654683244128], "axis": "z", "angle": 22.5},
+      "faces": {
+        "north": {"uv": [6.5, 14.5, 8, 15], "texture": "#fruit"},
+        "south": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "east": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "west": {"uv": [0, 14.5, 1.5, 15], "texture": "#fruit"},
+        "down": {"uv": [14.5, 14.5, 16, 16], "texture": "#fruit"}
       }
     }
   ]

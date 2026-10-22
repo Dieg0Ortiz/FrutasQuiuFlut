@@ -8,6 +8,9 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 public final class ModConfiguredFeatures {
 	public static final ResourceKey<ConfiguredFeature<?, ?>> QUIU_OAK_KEY =
 			ResourceKey.create(Registries.CONFIGURED_FEATURE, QuiuFruitsMod.id("quiu_oak"));
+	/** Roble Quiu gigante: crece al poner polvo de hueso en 4 retoños en cuadro. */
+	public static final ResourceKey<ConfiguredFeature<?, ?>> QUIU_OAK_GIANT_KEY =
+			ResourceKey.create(Registries.CONFIGURED_FEATURE, QuiuFruitsMod.id("quiu_oak_giant"));
 	public static final ResourceKey<ConfiguredFeature<?, ?>> ABEDUL_KEY =
 			ResourceKey.create(Registries.CONFIGURED_FEATURE, QuiuFruitsMod.id("abedul"));
 

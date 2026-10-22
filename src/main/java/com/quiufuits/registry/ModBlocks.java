@@ -36,19 +36,19 @@ public final class ModBlocks {
 
 	// --- Abedúl ---
 	public static final Block ABEDUL_LOG = register("abedul_log",
-			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_LOG).mapColor(MapColor.QUARTZ)));
+			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_LOG).mapColor(MapColor.WOOD)));
 	public static final Block STRIPPED_ABEDUL_LOG = register("stripped_abedul_log",
-			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_LOG).mapColor(MapColor.QUARTZ)));
+			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_LOG).mapColor(MapColor.SAND)));
 	public static final Block ABEDUL_WOOD = register("abedul_wood",
-			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_WOOD).mapColor(MapColor.QUARTZ)));
+			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_WOOD).mapColor(MapColor.WOOD)));
 	public static final Block STRIPPED_ABEDUL_WOOD = register("stripped_abedul_wood",
-			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_WOOD).mapColor(MapColor.QUARTZ)));
+			new RotatedPillarBlock(FabricBlockSettings.copyOf(Blocks.STRIPPED_BIRCH_WOOD).mapColor(MapColor.SAND)));
 	public static final Block ABEDUL_LEAVES = register("abedul_leaves",
-			new LeavesBlock(FabricBlockSettings.copyOf(Blocks.BIRCH_LEAVES).mapColor(MapColor.PLANT)));
+			new LeavesBlock(FabricBlockSettings.copyOf(Blocks.ACACIA_LEAVES).mapColor(MapColor.COLOR_GREEN)));
 	public static final Block ABEDUL_SAPLING = register("abedul_sapling",
 			new ModSaplingBlock(new AbedulTreeGrower(), FabricBlockSettings.copyOf(Blocks.BIRCH_SAPLING)));
 	public static final Block ABEDUL_PLANKS = register("abedul_planks",
-			new Block(FabricBlockSettings.copyOf(Blocks.BIRCH_PLANKS).mapColor(MapColor.QUARTZ)));
+			new Block(FabricBlockSettings.copyOf(Blocks.BIRCH_PLANKS).mapColor(MapColor.SAND)));
 
 	private ModBlocks() {
 	}
@@ -86,8 +86,9 @@ public final class ModBlocks {
 	public static BlockBehaviour.Properties fruitSettings() {
 		return FabricBlockSettings.create()
 				.mapColor(MapColor.COLOR_YELLOW)
-				.noCollission()
-				.instabreak()
+				// Se rompe como un bloque (golpe corto) y tiene colisión; no tapa las caras del tronco
+				.strength(0.4f)
+				.noOcclusion()
 				.sound(SoundType.WOOD)
 				.randomTicks();
 	}
