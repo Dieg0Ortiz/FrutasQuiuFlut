@@ -1,6 +1,5 @@
 {
   "itemGroup.quiufuits.main": "Frutas de Quiu",
-
   "block.quiufuits.quiu_oak_log": "Tronco de Roble de Quiu",
   "block.quiufuits.stripped_quiu_oak_log": "Tronco de Roble de Quiu sin corteza",
   "block.quiufuits.quiu_oak_wood": "Madera de Roble de Quiu",
@@ -8,7 +7,6 @@
   "block.quiufuits.quiu_oak_leaves": "Hojas de Roble de Quiu",
   "block.quiufuits.quiu_oak_sapling": "Retoño de Roble de Quiu",
   "block.quiufuits.quiu_oak_planks": "Tablones de Roble de Quiu",
-
   "block.quiufuits.abedul_log": "Tronco de Abedúl",
   "block.quiufuits.stripped_abedul_log": "Tronco de Abedúl sin corteza",
   "block.quiufuits.abedul_wood": "Madera de Abedúl",
@@ -16,48 +14,46 @@
   "block.quiufuits.abedul_leaves": "Hojas de Abedúl",
   "block.quiufuits.abedul_sapling": "Retoño de Abedúl",
   "block.quiufuits.abedul_planks": "Tablones de Abedúl",
-
   "block.quiufuits.solaria_fruit": "Fruta Solaria (cultivo)",
   "block.quiufuits.eburia_fruit": "Huevo Eburia (cultivo)",
   "block.quiufuits.nocturino_fruit": "Arándano Nocturino (cultivo)",
   "block.quiufuits.uvina_fruit": "Baya Uvina (cultivo)",
-
   "item.quiufuits.solaria_fruit": "Fruta Solaria",
   "item.quiufuits.eburia_fruit": "Huevo Eburia",
   "item.quiufuits.nocturino_fruit": "Arándano Nocturino",
   "item.quiufuits.uvina_fruit": "Baya Uvina",
-
   "item.quiufuits.solaria_seed": "Semilla de Fruta Solaria",
   "item.quiufuits.eburia_seed": "Semilla de Huevo Eburia",
   "item.quiufuits.nocturino_seed": "Semilla de Arándano Nocturino",
   "item.quiufuits.uvina_seed": "Semilla de Baya Uvina",
-
   "item.quiufuits.solaria_fruit_block": "Fruta Solaria (bloque)",
   "item.quiufuits.eburia_fruit_block": "Huevo Eburia (bloque)",
   "item.quiufuits.nocturino_fruit_block": "Arándano Nocturino (bloque)",
   "item.quiufuits.uvina_fruit_block": "Baya Uvina (bloque)",
-
   "item.quiufuits.pelos_eburia": "Pelos de Eburia",
   "item.quiufuits.hair.tooltip": "No se come. Solo sirve para crafteos.",
   "item.quiufuits.quiu_amulet": "Amuleto de Quiu",
-
   "item.quiufuits.fruit.stage.creciendo": "Creciendo",
   "item.quiufuits.fruit.stage.poco_maduro": "Poco maduro",
   "item.quiufuits.fruit.stage.maduro": "Maduro",
   "item.quiufuits.fruit.stage.podrido": "Podrido",
-
   "item.quiufuits.fruit.find_centro_quiu": "Encuéntralo y coséchalo en los árboles del Centro de Quiu.",
   "item.quiufuits.fruit.warning": "⚠ Atención: al alcanzar su punto máximo de crecimiento debes recogerlo lo antes posible. Después de un tiempo se pudrirá si no lo cosechas.",
   "item.quiufuits.seed.plant_abedul": "Puedes plantarla en §fTroncos de Abedúl Quiu§r para hacerla crecer.",
   "item.quiufuits.seed.plant_quiu_oak": "Puedes plantarla en §fTroncos de Roble de Quiu§r para hacerla crecer.",
-
   "item.quiufuits.solaria.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la §bFruta§r en la §bMano Secundaria§r para extraer la §aSemilla§r.",
   "item.quiufuits.solaria.tooltip.mob": "Dale de comer la Fruta a un §dPlumosaurio§r para tener la probabilidad de que suelte §7Excremento§r.",
-
   "item.quiufuits.eburia.tooltip.seed": "Utiliza un §eHacha§r mientras tienes un §bHuevo§r en la §bMano Secundaria§r para extraer la §aSemilla§r.",
   "item.quiufuits.eburia.tooltip.hair": "Utiliza unas §eTijeras§r mientras tienes el §bHuevo§r en la §bMano Secundaria§r para extraer §6Pelo de Eburia§r.",
   "item.quiufuits.eburia.tooltip.hair_item": "Utiliza unas §eTijeras§r mientras tienes el §bHuevo Eburia§r en la §bMano Secundaria§r para conseguirlos.",
-
   "item.quiufuits.nocturino.tooltip.seed": "Utiliza un §eHacha§r mientras tienes un §bArándano§r en la §bMano Secundaria§r para extraerla.",
-  "item.quiufuits.uvina.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la §bBaya Uvina§r en la §bMano Secundaria§r para extraerla."
+  "item.quiufuits.uvina.tooltip.seed": "Utiliza un §eHacha§r mientras tienes la §bBaya Uvina§r en la §bMano Secundaria§r para extraerla.",
+  "item.quiufuits.gigantofruta": "Gigantofruta",
+  "item.quiufuits.gigantofruta.tooltip": "Fruta del Centro de Quiu de enorme tamaño.",
+  "item.quiufuits.fruto_quiu": "Fruto Quiu",
+  "item.quiufuits.fruto_quiu.tooltip": "Al comerlo, la próxima vez que mueras conservas tu inventario.",
+  "item.quiufuits.fruto_quiu.tooltip.once": "Se gasta al morir: come otro para seguir protegido. No se acumula.",
+  "message.quiufuits.fruto_quiu.protected": "El Fruto Quiu protege tu inventario: si mueres, lo conservarás.",
+  "message.quiufuits.fruto_quiu.already": "Tu inventario ya estaba protegido. El Fruto Quiu no se acumula.",
+  "message.quiufuits.fruto_quiu.restored": "El Fruto Quiu guardó tu inventario. Come otro para seguir protegido."
 }

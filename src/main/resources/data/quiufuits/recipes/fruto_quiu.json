@@ -1,0 +1,32 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "SGE",
+    "GAG",
+    "NGU"
+  ],
+  "key": {
+    "G": {
+      "item": "quiufuits:gigantofruta"
+    },
+    "A": {
+      "item": "minecraft:golden_apple"
+    },
+    "S": {
+      "item": "quiufuits:solaria_fruit"
+    },
+    "E": {
+      "item": "quiufuits:eburia_fruit"
+    },
+    "N": {
+      "item": "quiufuits:nocturino_fruit"
+    },
+    "U": {
+      "item": "quiufuits:uvina_fruit"
+    }
+  },
+  "result": {
+    "item": "quiufuits:fruto_quiu",
+    "count": 1
+  }
+}

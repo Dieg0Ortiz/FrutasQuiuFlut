@@ -51,6 +51,8 @@ public final class ModItemGroups {
 				}
 
 				entries.accept(ModItems.QUIU_AMULET);
+				entries.accept(ModItems.GIGANTOFRUTA);
+				entries.accept(ModItems.FRUTO_QUIU);
 			})
 			.build();
 

@@ -2,6 +2,7 @@ package com.quiufuits;
 
 import com.quiufuits.config.ModConfig;
 import com.quiufuits.fruits.FruitDefinitions;
+import com.quiufuits.fruits.QuiuKeepInventory;
 import com.quiufuits.integration.MobFeedIntegration;
 import com.quiufuits.registry.ModBlocks;
 import com.quiufuits.registry.ModItemGroups;
@@ -26,6 +27,7 @@ public class QuiuFruitsMod implements ModInitializer {
 		ModItemGroups.register();
 		ModRegistries.registerCallbacks();
 		MobFeedIntegration.register();
+		QuiuKeepInventory.register();
 		ModWorldGen.register();
 		LOGGER.info("Quiu Fruits listo — {} frutas registradas.", FruitDefinitions.all().size());
 	}

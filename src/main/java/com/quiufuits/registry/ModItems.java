@@ -1,6 +1,8 @@
 package com.quiufuits.registry;
 
 import com.quiufuits.QuiuFruitsMod;
+import com.quiufuits.items.FrutoQuiuItem;
+import com.quiufuits.items.GigantofrutaItem;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.BlockItem;
@@ -27,6 +29,11 @@ public final class ModItems {
 
 	/** Amuleto de Quiu — crafteo de ejemplo con pelos de varias frutas. */
 	public static final Item QUIU_AMULET = register("quiu_amulet", new Item(new Item.Properties().stacksTo(1)));
+
+	/** Gigantofruta — no crece en árboles ni se craftea; solo en creativo. */
+	public static final Item GIGANTOFRUTA = register("gigantofruta", new GigantofrutaItem(new Item.Properties()));
+	/** Fruto Quiu — al comerlo conservas el inventario en tu próxima muerte. */
+	public static final Item FRUTO_QUIU = register("fruto_quiu", new FrutoQuiuItem(new Item.Properties()));
 
 	private ModItems() {
 	}
